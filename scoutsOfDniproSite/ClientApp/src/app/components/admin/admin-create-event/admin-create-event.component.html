@@ -1,0 +1,5 @@
+<input type="text" placeholder="Введите название мероприятия" #name>
+<input type="text" placeholder="Введите описание мероприятия" #text>
+<input type="text" placeholder="Введите тип мероприятия" #type>
+<input type="text" placeholder="Введите дату проведения мероприятия в формате 01.09.1983" #date>
+<button (click)="create(name.value, text.value, type.value, date.value)">Create</button>

@@ -1,0 +1,14 @@
+<div *ngIf="isReg == false">
+    <h2>{{errorText}}</h2>
+    <input type="text" placeholder="Email" #email>
+    <input type="text" placeholder="Имя" #firstname>
+    <input type="text" placeholder="Фамилия" #lastname>
+    <input type="text" placeholder="Лесное имя" #forestname>
+    <input type="password" placeholder="Password" #password>
+    <button (click)="register(email.value, password.value, firstname.value, lastname.value, forestname.value)">Auth</button>
+    <a [routerLink]="['/auth']">Есть аккаунт? - Авторизоватся.</a>
+</div>
+<div *ngIf="isReg == true">
+    <h1>Вы успешно зарегестрировались. Ожидайте подтверждение вашей заявки.</h1>
+    <a [routerLink]="['/']">Перейти на главную страницу.</a>
+</div>

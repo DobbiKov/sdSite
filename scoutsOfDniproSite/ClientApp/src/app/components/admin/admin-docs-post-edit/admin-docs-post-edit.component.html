@@ -1,0 +1,7 @@
+<div>
+    <p>В данный момент: {{post.name}}</p>
+    <input type="text" placeholder="Введите новое имя" #name>
+    <p>В данный момент: {{post.text}}</p>
+    <input type="text" placeholder="Введите новый текст" #text>
+    <button (click)="update(name.value, text.value)">Update</button>
+</div>

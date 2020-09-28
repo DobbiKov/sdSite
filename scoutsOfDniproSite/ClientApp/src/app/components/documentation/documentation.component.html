@@ -1,0 +1,9 @@
+<div *ngIf="isLoggedIn == true">
+    <h1>Документация</h1>
+    <div *ngFor="let doc of docs;">
+        <button (click)="redirect(doc.id)">{{doc.name}}</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы!</h1>
+</div>

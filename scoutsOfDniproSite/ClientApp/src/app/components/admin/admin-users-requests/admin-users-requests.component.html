@@ -1,0 +1,14 @@
+<div *ngIf="isLoggedIn == true && canAcceptUsers == true">
+    <h1>Заявки на регистрацию:</h1>
+    <div *ngFor="let user of users">
+        <p>{{user.firstName}}</p>
+        <p>{{user.lastName}}</p>
+        <p>{{user.forestName}}</p>
+        <p>{{user.userName}}</p>
+        <button (click)="accept(user.id)">Принять</button>
+        <button (click)="reject(user.id)">Отклонить</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div>

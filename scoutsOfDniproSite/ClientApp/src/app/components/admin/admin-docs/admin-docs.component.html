@@ -1,0 +1,11 @@
+<div *ngIf="isLoggedIn == true">
+    <a [routerLink]="['/admins/docs/create']"><h1>Создать новый раздел</h1></a>
+
+    <h1>Документация</h1>
+    <div *ngFor="let doc of docs;">
+        <button (click)="redirect(doc.id)">{{doc.name}}</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы!</h1>
+</div>

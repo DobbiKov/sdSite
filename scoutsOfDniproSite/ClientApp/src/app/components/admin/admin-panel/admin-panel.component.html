@@ -1,0 +1,10 @@
+<div *ngIf="isLoggedIn == true && isAdmin == true" class="admin-panel">
+    <a [routerLink]="['/admins/requests']">Заявки на регистрацию</a>
+    <a [routerLink]="['/admins/news']">Новости</a>
+    <a [routerLink]="['/admins/users']">Пользователи</a>
+    <a [routerLink]="['/admins/events']">Мероприятия</a>
+    <a [routerLink]="['/admins/docs']">Документация</a>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div>

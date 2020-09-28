@@ -1,0 +1,4 @@
+<div *ngFor="let post of posts;" class="posts">
+    <p>{{post.name}}</p>
+    <button (click)="redirect(post.id)">More</button>
+</div>

@@ -1,0 +1,7 @@
+<input type="text" placeholder="Введите заголовок" #title>
+<p>В данный момент: {{post.title}}</p>
+<input type="text" placeholder="Краткое описание" #stext>
+<p>В данный момент: {{post.shortText}}</p>
+<input type="text" placeholder="Введите текст" #text>
+<p>В данный момент: {{post.text}}</p>
+<button (click)="newPost(title.value, stext.value, text.value)">Update</button>

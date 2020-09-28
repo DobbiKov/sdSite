@@ -1,0 +1,4 @@
+<input type="text" placeholder="Введите заголовок нового поста" #title>
+<input type="text" placeholder="Краткое описание" #stext>
+<input type="text" placeholder="Введите текст" #text>
+<button (click)="newPost(title.value, stext.value, text.value)">New Post</button>

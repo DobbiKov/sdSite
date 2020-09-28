@@ -1,0 +1,15 @@
+<h1>Мероприятия:</h1>
+<div *ngIf="isLoggedIn == true && isAdmin == true" class="admin-panel">
+    <a [routerLink]="['/admins/events/create']">Создать мероприятие</a>
+    <div *ngFor="let event of events;" class="event">
+        <p>Название мероприятия: {{event.name}}</p>
+        <p>Описание мероприятия: {{event.text}}</p>
+        <p>Дата проведения: {{event.date}}</p>
+        <p>Тип мероприятия: {{event.type}}</p>
+        <button (click)="edit(event.id)">Edit</button>
+        <button (click)="delete(event.id)">Delete</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div>

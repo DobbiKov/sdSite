@@ -1,0 +1,8 @@
+<div>
+    <h1>Новости:</h1>
+    <div *ngFor="let post of posts;">
+        <h1>{{post.title}}</h1>
+        <h1>{{post.shortText}}</h1>
+        <button (click)="redirectSeen(post.id)">Смотреть</button>
+    </div>
+</div>

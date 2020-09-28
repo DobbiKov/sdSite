@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <div class="nav">
+      <div class="logo-div">
+        <a [routerLink]="['/']">scoutsOfDniproSite</a>
+      </div>
+      <div class="buttons-div">
+        <a [routerLink]="['/']" [routerLinkActive]='active'>Главная</a>
+        <a [routerLink]="['/about']">О нас</a>
+        <a [routerLink]="['/news']">Новости</a>
+        <a [routerLink]="['/join']">Присоеденится</a>
+        <a [routerLink]="['/auth']" *ngIf='isLoggedIn == false'>Войти</a>
+        <a [routerLink]="['/youracc']" *ngIf='isLoggedIn == true'>Личный кабинет</a>
+        <a [routerLink]="['/admin']" *ngIf='isLoggedIn == true && isAdmin == true'>Admin panel</a>
+        <!-- <a [routerLink]="['/auth']" *ngIf='isLoggedIn == true'>{{name}}</a> -->
+      </div>
+    </div>
+  </nav>
+</header>

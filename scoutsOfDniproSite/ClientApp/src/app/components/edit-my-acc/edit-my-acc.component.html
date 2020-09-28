@@ -1,0 +1,43 @@
+<div *ngIf="isLoggedIn">
+    <h1>Редактирование вашего аккаунта:</h1>
+    <div class="component">
+        <p>{{firstNameStatus}}</p>
+        <input type="text" placeholder="Введите имя:" #firstname>
+        <button (click)="update(0, firstname.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{lastNameStatus}}</p>
+        <input type="text" placeholder="Введите фамилию:" #lastName>
+        <button (click)="update(1, lastName.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{forestNameStatus}}</p>
+        <input type="text" placeholder="Введите лесное имя:" #forestname>
+        <button (click)="update(2, forestname.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{homeAdressStatus}}</p>
+        <input type="text" placeholder="Введите ваш адресс:" #homeAdress>
+        <button (click)="update(3, homeAdress.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{schoolStatus}}</p>
+        <input type="text" placeholder="Введите место работы/учебы:" #school>
+        <button (click)="update(4, school.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{classStatus}}</p>
+        <input type="text" placeholder="Введите ваш класс(если учитесь в школе):" #class>
+        <button (click)="update(5, class.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{phoneNumberStatus}}</p>
+        <input type="text" placeholder="Введите номер телефона:" #phoneNumber>
+        <button (click)="update(6, phoneNumber.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{passportStatus}}</p>
+        <input type="text" placeholder="Введите номер пасспорта/св. о рождении:" #passport>
+        <button (click)="update(7, passport.value)">Save</button>
+    </div>
+</div>

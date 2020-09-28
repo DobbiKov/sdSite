@@ -1,0 +1,13 @@
+<div *ngIf="isLoggedIn == true && isAdmin == true">
+    <h1>Пользователи:</h1>
+    <div *ngFor="let user of users;">
+        <p>Почта: {{user.userName}}</p>
+        <p>Имя: {{user.firstName}}</p>
+        <p>Фамилия: {{user.lastName}}</p>
+        <p>Лесное имя: {{user.forestName}}</p>
+        <button (click)="redirect(user.id)">More</button>
+    </div>
+</div>
+<div *ngIf="!isLoggedIn || !isAdmin">
+    <h1>Сюда тебе нельзя.</h1>
+</div>

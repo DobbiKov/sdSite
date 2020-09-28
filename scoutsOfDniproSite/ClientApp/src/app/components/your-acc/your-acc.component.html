@@ -1,0 +1,21 @@
+<div *ngIf="isLoggedIn == true" class="your-acc">
+    <h1>Имя: {{user.firstName}}</h1>
+    <h1>Фамилия: {{user.lastName}}</h1>
+    <h1>Лесное имя: {{user.forestName}}</h1>
+
+    <h1>Место работы/учебы: {{user.school}}</h1>
+    <h1>Адресс проживания: {{user.homeAdress}}</h1>
+    <h1>Номер телефона: {{user.phoneNumber}}</h1>
+    <h1>Номер пасспорта/св. о рождении: {{user.passport}}</h1>
+    <h1>Последние посещение сайта: {{user.lastSignIn}}</h1>
+    <h1>Последние мероприятие: {{user.lastEvent}}</h1>
+    <button (click)="logout()">Logout</button>
+    <a [routerLink]="['/editmyacc']">Редактировать информацию</a>
+    <a [routerLink]="['/youracc/scout-minimum']">Скаутский минимум</a>
+    <a [routerLink]="['/youracc/events']">Все Мероприятия</a>
+    <a [routerLink]="['/youracc/now-events']">Ближайшие Мероприятия</a>
+    <a [routerLink]="['/docs']">Документация</a>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы</h1>
+</div>

@@ -1,0 +1,9 @@
+<p>В данный момент: {{ev.name}}</p>
+<input type="text" placeholder="Введите название мероприятия" #name>
+<p>В данный момент: {{ev.text}}</p>
+<input type="text" placeholder="Введите описание мероприятия" #text>
+<p>В данный момент: {{ev.type}}</p>
+<input type="text" placeholder="Введите тип мероприятия" #type>
+<p>В данный момент: {{ev.date}}</p>
+<input type="text" placeholder="Введите дату проведения мероприятия в формате 01.09.1983" #date>
+<button (click)="update(name.value, text.value, type.value, date.value)">Update</button>
