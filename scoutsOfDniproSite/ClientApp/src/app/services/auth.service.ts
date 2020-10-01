@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
@@ -46,7 +46,11 @@ export class AuthService {
       {headers: {'Content-Type': 'application/json'}})
       .subscribe((token:Token) => {
         localStorage.setItem(ACCES_TOKEN_KEY, token.acces_token); 
-        this.router.navigate['/youracc']
+      },
+      (error: HttpErrorResponse) => {
+          if(error.status == 404){
+            this.logout();
+          }
       }
     );
   }

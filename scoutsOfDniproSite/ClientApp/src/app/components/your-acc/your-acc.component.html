@@ -9,6 +9,7 @@
     <h1>Номер пасспорта/св. о рождении: {{user.passport}}</h1>
     <h1>Последние посещение сайта: {{user.lastSignIn}}</h1>
     <h1>Последние мероприятие: {{user.lastEvent}}</h1>
+    <h1>Ваш telegram id: {{user.telegramId}}</h1>
     <button (click)="logout()">Logout</button>
     <a [routerLink]="['/editmyacc']">Редактировать информацию</a>
     <a [routerLink]="['/youracc/scout-minimum']">Скаутский минимум</a>

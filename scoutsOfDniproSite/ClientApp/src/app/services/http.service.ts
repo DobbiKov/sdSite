@@ -31,6 +31,10 @@ export class HttpService {
         if(this.isAuthenticated()) return localStorage.getItem(ACCES_TOKEN_KEY);
         return "";
     }
+    logout(): void {
+        localStorage.removeItem(ACCES_TOKEN_KEY);
+        this.router.navigate(['']);
+      }
     updateToken(): void{
         this.http.post
         (
@@ -39,7 +43,11 @@ export class HttpService {
           {headers: {'Content-Type': 'application/json'}})
           .subscribe((token:Token) => {
             localStorage.setItem(ACCES_TOKEN_KEY, token.acces_token); 
-            this.router.navigate['/youracc']
+          },
+          (error: HttpErrorResponse) => {
+              if(error.status == 404){
+                this.logout();
+              }
           }
         );
       }

@@ -16,6 +16,26 @@ export class RegisterComponent implements OnInit {
   public errorText: string = "";
 
   register(email: string, password: string, firstName: string, lastName: string, forestName: string): any{
+    if(email.length < 10){
+      this.errorText = "Длина email'a должна быть не менее десяти символов.";
+      return;
+    }
+    if(password.length < 8){
+      this.errorText = "Длина пароля должна быть не менее восьми символов.";
+      return;
+    }
+    if(firstName.length < 1){
+      this.errorText = "Вы не ввели имя.";
+      return;
+    }
+    if(lastName.length < 1){
+      this.errorText = "Вы не ввели фамилию.";
+      return;
+    }
+    if(forestName.length < 1){
+      this.errorText = "Вы не ввели лесное имя.";
+      return;
+    }
     var request = this.http.post('/api/Users/Register', {UserName: email, Password: password, FirstName: firstName, LastName: lastName, ForestName: forestName}, {headers: {'Content-Type': 'application/json'}});
     request.subscribe(
       (data:User) => {

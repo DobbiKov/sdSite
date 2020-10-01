@@ -2,16 +2,16 @@
   <nav>
     <div class="nav">
       <div class="logo-div">
-        <a [routerLink]="['/']">scoutsOfDniproSite</a>
+        <a [routerLink]="['/']" (click)="clickActive(1)">scoutsOfDniproSite</a>
       </div>
       <div class="buttons-div">
-        <a [routerLink]="['/']" [routerLinkActive]='active'>Главная</a>
-        <a [routerLink]="['/about']">О нас</a>
-        <a [routerLink]="['/news']">Новости</a>
-        <a [routerLink]="['/join']">Присоеденится</a>
-        <a [routerLink]="['/auth']" *ngIf='isLoggedIn == false'>Войти</a>
-        <a [routerLink]="['/youracc']" *ngIf='isLoggedIn == true'>Личный кабинет</a>
-        <a [routerLink]="['/admin']" *ngIf='isLoggedIn == true && isAdmin == true'>Admin panel</a>
+        <a [routerLink]="['/']" [routerLinkActive]='active' [class.active]="activeComp == 1" (click)="clickActive(1)">Главная</a>
+        <a [routerLink]="['/about']" [class.active]="activeComp == 2" (click)="clickActive(2)">О нас</a>
+        <a [routerLink]="['/news']" [class.active]="activeComp == 3" (click)="clickActive(3)">Новости</a>
+        <a [routerLink]="['/join']" [class.active]="activeComp == 4" (click)="clickActive(4)">Присоеденится</a>
+        <a [routerLink]="['/auth']" [class.active]="activeComp == 5" (click)="clickActive(5)" *ngIf='isLoggedIn == false'>Войти</a>
+        <a [routerLink]="['/youracc']" [class.active]="activeComp == 6" (click)="clickActive(6)" *ngIf='isLoggedIn == true'>Личный кабинет</a>
+        <a [routerLink]="['/admin']" [class.active]="activeComp == 7" (click)="clickActive(7)" *ngIf='isLoggedIn == true && isAdmin == true'>Admin panel</a>
         <!-- <a [routerLink]="['/auth']" *ngIf='isLoggedIn == true'>{{name}}</a> -->
       </div>
     </div>

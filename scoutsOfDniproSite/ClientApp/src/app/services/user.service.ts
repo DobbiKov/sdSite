@@ -15,7 +15,8 @@ export const ACCES_TOKEN_KEY = "acces_token";
 })
 export class UserService {
     constructor(
-        private http: HttpClient
+        private http: HttpClient,
+        private router: Router
     ) { 
         this.getUser();
     }
@@ -86,11 +87,16 @@ export class UserService {
             Password: user.password,
             JWTToken: this.getToken(),
             LastSignIn: user.lastSignIn,
-            LastEvent: user.lastEvent
+            LastEvent: user.lastEvent,
+            TelegramId: user.telegramId
         };
         var req = this.http.put(`/api/Users/Update/${user.id}`, _user, {headers: {'Accept' : 'application/json'}});
         return req;
     }
+    logout(): void {
+        localStorage.removeItem(ACCES_TOKEN_KEY);
+        this.router.navigate(['']);
+      }
     updateToken(): void{
         this.http.post
         (
@@ -99,6 +105,11 @@ export class UserService {
           {headers: {'Content-Type': 'application/json'}})
           .subscribe((token:Token) => {
             localStorage.setItem(ACCES_TOKEN_KEY, token.acces_token); 
+          },
+          (error: HttpErrorResponse) => {
+              if(error.status == 404){
+                this.logout();
+              }
           }
         );
       }

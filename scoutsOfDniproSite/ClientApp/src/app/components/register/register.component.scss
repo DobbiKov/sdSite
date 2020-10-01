@@ -1,0 +1,10 @@
+.error-div{
+    background: rgb(240, 128, 128);
+    max-width: 800px;
+    border-radius: 25px;
+    text-align: center;
+    .error-text{
+        color: white;
+        box-shadow: 2px 3px 2px 3px;
+    }
+}

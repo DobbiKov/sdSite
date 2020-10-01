@@ -40,4 +40,9 @@
         <input type="text" placeholder="Введите номер пасспорта/св. о рождении:" #passport>
         <button (click)="update(7, passport.value)">Save</button>
     </div>
+    <div class="component">
+        <p>{{telegramIdStatus}}</p>
+        <input type="text" placeholder="Введите ваш telegram Id:" #telegramId>
+        <button (click)="update(8, telegramId.value)">Save</button>
+    </div>
 </div>

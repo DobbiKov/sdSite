@@ -6,6 +6,7 @@ export class User{
     lastName: string;
     siteRoleId: number;
     password: string;
+    telegramId: string;
 
     homeAdress: string;
     school: string;

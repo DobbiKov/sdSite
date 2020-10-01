@@ -27,6 +27,7 @@ export class EditMyAccComponent implements OnInit {
   public classStatus: string = "";
   public phoneNumberStatus: string = "";
   public passportStatus: string = "";
+  public telegramIdStatus: string = "";
 
   public get isLoggedIn(): boolean {
     return this.as.isAuthenticated();
@@ -139,6 +140,20 @@ export class EditMyAccComponent implements OnInit {
           },
           (error: HttpErrorResponse) => {
             this.passportStatus = "Не удалось сохранить.";
+            console.log(error.message);
+          }
+        );
+        break;
+      }
+      case 8:{
+        user.telegramId = value;
+        this.us.updateUser(user).subscribe(
+          (data: User) => {
+            this.telegramIdStatus = "Успешно сохранено";
+            this.us._user = data;
+          },
+          (error: HttpErrorResponse) => {
+            this.telegramIdStatus = "Не удалось сохранить.";
             console.log(error.message);
           }
         );
