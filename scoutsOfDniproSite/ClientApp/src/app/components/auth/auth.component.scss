@@ -1,0 +1,33 @@
+.auth{
+    position: relative;
+    .container{
+        position: absolute;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        .container-inner{
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            .container-inner-inner{
+                display: block;
+                width: 80%;
+                height: 100%;
+                margin: auto;
+                background-color: #1cc2b8;
+                border-radius: 15px;
+                .container-inner-inner-inner{
+                    display: block;
+                    width: 80%;
+                    height: 100%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
