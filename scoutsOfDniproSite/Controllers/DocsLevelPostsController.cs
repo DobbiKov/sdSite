@@ -58,7 +58,7 @@ namespace scoutsOfDniproSite.Controllers
             {
                 if (i.DocsLevelId == id)
                     newPosts.Add(i);
-            }
+            } 
 
             return newPosts;
         }

@@ -105,6 +105,7 @@ export class UserService {
           {headers: {'Content-Type': 'application/json'}})
           .subscribe((token:Token) => {
             localStorage.setItem(ACCES_TOKEN_KEY, token.acces_token); 
+            this.getUser();
           },
           (error: HttpErrorResponse) => {
               if(error.status == 404){

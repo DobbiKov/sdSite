@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-your-acc-nav',
@@ -9,7 +9,7 @@ export class YourAccNavComponent implements OnInit {
 
   constructor() { }
 
-  public activeComp: number = 1;
+  @Input() activeComp: number;
 
   clickActive(id: number): void {
     this.activeComp = id;
