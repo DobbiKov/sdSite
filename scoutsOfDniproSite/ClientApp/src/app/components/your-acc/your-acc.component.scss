@@ -41,7 +41,7 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
-    }   
+    }
     .block{
         background-color: #EEEDED;
         position: relative;
@@ -76,12 +76,15 @@
                             font-weight: 700;
                             font-size: 25px;
                         }
+                        .logout{
+                          padding: 5px 5px 5px 5px;
+                          transition: 0.3s;
+                        }
                         .logout:hover{
                             cursor: pointer;
                             background-color: black;
                             color: white;
                             border-radius: 15px;
-                            padding: 5px 5px 5px 5px;
                         }
                         .container-1-child-inner-p{
                             position: relative;
