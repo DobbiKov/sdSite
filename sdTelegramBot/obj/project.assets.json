@@ -9379,11 +9379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DobbiKov\\OneDrive\\Рабочий стол\\sdSite\\sdTelegramBot\\sdTelegramBot.csproj",
+      "projectUniqueName": "C:\\Егор\\работа\\programming\\progr\\projects\\sdSite\\sdTelegramBot\\sdTelegramBot.csproj",
       "projectName": "sdTelegramBot",
-      "projectPath": "C:\\Users\\DobbiKov\\OneDrive\\Рабочий стол\\sdSite\\sdTelegramBot\\sdTelegramBot.csproj",
+      "projectPath": "C:\\Егор\\работа\\programming\\progr\\projects\\sdSite\\sdTelegramBot\\sdTelegramBot.csproj",
       "packagesPath": "C:\\Users\\DobbiKov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DobbiKov\\OneDrive\\Рабочий стол\\sdSite\\sdTelegramBot\\obj\\",
+      "outputPath": "C:\\Егор\\работа\\programming\\progr\\projects\\sdSite\\sdTelegramBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -9404,8 +9404,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\DobbiKov\\OneDrive\\Рабочий стол\\sdSite\\scoutsOfDniproSite\\scoutsOfDniproSite.csproj": {
-              "projectPath": "C:\\Users\\DobbiKov\\OneDrive\\Рабочий стол\\sdSite\\scoutsOfDniproSite\\scoutsOfDniproSite.csproj"
+            "C:\\Егор\\работа\\programming\\progr\\projects\\sdSite\\scoutsOfDniproSite\\scoutsOfDniproSite.csproj": {
+              "projectPath": "C:\\Егор\\работа\\programming\\progr\\projects\\sdSite\\scoutsOfDniproSite\\scoutsOfDniproSite.csproj"
             }
           }
         }
