@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .container{
     width: 70%;
     display: block;
@@ -5,4 +9,8 @@
 ._container{
     display: flex;
     justify-content: center;
+}
+.footer{
+    bottom: 0;
+    float: bottom;
 }

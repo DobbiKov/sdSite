@@ -16,7 +16,7 @@ export class NewsComponent implements OnInit {
   constructor(
     private hs: HttpService,
     private router: Router
-  ) { 
+  ) {
     this.getInfo();
   }
   public posts: Post[] = [];
@@ -35,6 +35,5 @@ export class NewsComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
 }
 

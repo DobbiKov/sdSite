@@ -179,6 +179,9 @@ namespace scoutsOfDniproSite.Migrations
                     b.Property<int>("SiteRoleId")
                         .HasColumnType("int");
 
+                    b.Property<string>("TelegramId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.Property<string>("UserName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 

@@ -16,12 +16,12 @@ export class AdminUsersRequestsComponent implements OnInit {
 
   public users: UserRequest[] = [];
 
-  constructor( 
-    private us: UserService, 
-    private route: Router, 
+  constructor(
+    private us: UserService,
+    private route: Router,
     private hs: HttpService,
     private as: AuthService
-  ) { 
+  ) {
     this.getInfo();
   }
 

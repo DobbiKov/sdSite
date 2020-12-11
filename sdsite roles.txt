@@ -1,0 +1,5 @@
+1 - User
+2 - Scout Leader
+3 - Moderator
+4 - Admin
+5 - System Admin

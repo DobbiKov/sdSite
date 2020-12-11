@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DocsLevelsPost } from '../../../models/docslevelspost';
+import { AuthService } from '../../../services/auth.service';
 import { HttpService } from '../../../services/http.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class AdminDocsPostsComponent implements OnInit {
   constructor(
     private router: Router,
     private hs: HttpService,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private as: AuthService
   ) {
     this.id = Number(this.activateRoute.snapshot.paramMap.get('id'));
     this.getPosts();
@@ -22,6 +24,7 @@ export class AdminDocsPostsComponent implements OnInit {
 
   public id: number;
   public posts: DocsLevelsPost[];
+  public isLoggedIn: boolean = !!this.as.isAuthenticated();
 
   getPosts(): void{
     this.hs.request('GET', `/api/DocsLevelPosts/ByDocsLevel/${this.id}`).subscribe(

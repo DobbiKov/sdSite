@@ -23,5 +23,6 @@ namespace scoutsOfDniproSite.Models
 
         public string LastSignIn { get; set; }
         public string LastEvent { get; set; }
+        public string TelegramId { get; set; }
     }
 }

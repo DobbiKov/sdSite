@@ -38,6 +38,8 @@ import { AdminDocsPostsComponent } from './components/admin/admin-docs-posts/adm
 import { AdminDocsCreateComponent } from './components/admin/admin-docs-create/admin-docs-create.component';
 import { AdminDocsPostCreateComponent } from './components/admin/admin-docs-post-create/admin-docs-post-create.component';
 import { AdminDocsPostEditComponent } from './components/admin/admin-docs-post-edit/admin-docs-post-edit.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { YourAccNavComponent } from './components/your-acc/your-acc-nav/your-acc-nav.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import { AdminDocsPostEditComponent } from './components/admin/admin-docs-post-e
     AdminDocsPostsComponent,
     AdminDocsCreateComponent,
     AdminDocsPostCreateComponent,
-    AdminDocsPostEditComponent
+    AdminDocsPostEditComponent,
+    FooterComponent,
+    YourAccNavComponent
   ],
   imports: [
     BrowserModule,

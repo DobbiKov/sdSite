@@ -19,14 +19,15 @@ export class EditMyAccComponent implements OnInit {
   ) {
    }
 
-  public firstNameStatus: string = "";
-  public lastNameStatus: string = "";
-  public forestNameStatus: string = "";
-  public homeAdressStatus: string = "";
-  public schoolStatus: string = "";
-  public classStatus: string = "";
-  public phoneNumberStatus: string = "";
-  public passportStatus: string = "";
+  public firstNameStatus: string = "Введите имя:";
+  public lastNameStatus: string = "Введите фамилию:";
+  public forestNameStatus: string = "Введите лесное имя:";
+  public homeAdressStatus: string = "Введите ваш адресс:";
+  public schoolStatus: string = "Введите место работы/учебы:";
+  public classStatus: string = "Введите класс/курс(если учитесь):";
+  public phoneNumberStatus: string = "Введите номер телефона:";
+  public passportStatus: string = "Номер пасспорта/св. о рождении:";
+  public telegramIdStatus: string = "Введите ваш Telegram ID:";
 
   public get isLoggedIn(): boolean {
     return this.as.isAuthenticated();
@@ -139,6 +140,20 @@ export class EditMyAccComponent implements OnInit {
           },
           (error: HttpErrorResponse) => {
             this.passportStatus = "Не удалось сохранить.";
+            console.log(error.message);
+          }
+        );
+        break;
+      }
+      case 8:{
+        user.telegramId = value;
+        this.us.updateUser(user).subscribe(
+          (data: User) => {
+            this.telegramIdStatus = "Успешно сохранено";
+            this.us._user = data;
+          },
+          (error: HttpErrorResponse) => {
+            this.telegramIdStatus = "Не удалось сохранить.";
             console.log(error.message);
           }
         );

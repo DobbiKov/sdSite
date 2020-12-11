@@ -47,6 +47,15 @@ namespace scoutsOfDniproSite.Controllers
             if (user == null)
                 return NotFound();
             return user;
+        }           
+        // GET: api/Users/5
+        [HttpGet("/api/Users/ByTelegramId/{id}")]
+        public async Task<ActionResult<User>> GetUserByTelegramId(string id)
+        {
+            var user = await db.users.FirstOrDefaultAsync(x => x.TelegramId == id);
+            if (user == null)
+                return NotFound();
+            return user;
         }        
         
         [HttpGet("/api/Users/ByToken")]

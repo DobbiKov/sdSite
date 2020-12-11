@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DocsLevelsPost } from '../../models/docslevelspost';
+import { AuthService } from '../../services/auth.service';
 import { HttpService } from '../../services/http.service';
 
 @Component({
@@ -14,12 +15,14 @@ export class DocumentationPostsComponent implements OnInit {
   constructor(
     private router: Router,
     private hs: HttpService,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private as: AuthService
   ) {
     this.id = Number(this.activateRoute.snapshot.paramMap.get('id'));
     this.getPosts();
    }
 
+  public isLoggedIn: boolean = !!this.as.isAuthenticated();
   public id: number;
   public posts: DocsLevelsPost[];
 

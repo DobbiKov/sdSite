@@ -11,15 +11,20 @@ import { UserService } from '../../services/user.service';
 
 export class NavMenuComponent {
 
+  constructor(
+    private us: UserService,
+    private as: AuthService
+  ){
+    this.activeComp = 1;
+  }
+  public activeComp: number;
   public get isLoggedIn(): boolean {
     return this.as.isAuthenticated();
   }
   public get isAdmin(): boolean {
     return this.us.role.isAdmin;
   }
-
-  constructor(
-    private us: UserService,
-    private as: AuthService){
+  clickActive(num: number): void{
+    this.activeComp = num;
   }
 }
