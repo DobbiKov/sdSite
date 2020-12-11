@@ -7,7 +7,7 @@ nav{
         padding-top: 20px;
         padding-bottom: 20px;
     }
-} 
+}
 header{
     position: relative;
     .text{
@@ -22,7 +22,7 @@ header{
             display: flex;
             justify-content: center;
             .text-h1{
-                
+
                 width: 100%;
                 margin: auto;
                 h1{
@@ -54,12 +54,12 @@ header{
             .event-block{
                 display: flex;
                 .event-block-20{
-                    width: 20%;  
+                    width: 20%;
                     p{
                         font-family: 'Roboto', sans-serif;
                         font-weight: 900;
                         font-size: 40px;
-                    } 
+                    }
                 }
                 .event-block-80{
                     width: 80%;
@@ -78,4 +78,27 @@ header{
             }
         }
     }
+}
+
+@media screen and (max-width: 575px){
+  .block{
+    .block-inner{
+        .event{
+            .event-block{
+              display: flex;
+              .event-block-20-non-date{
+                display: none;
+              }
+                .event-block-80{
+                  .event-block-80-name{
+                      font-size: 20px;
+                  }
+                  .event-block-80-text{
+                      font-size: 15px;
+                  }
+              }
+            }
+        }
+    }
+  }
 }
